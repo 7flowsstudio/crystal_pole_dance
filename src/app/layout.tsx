@@ -1,17 +1,15 @@
 import type { Metadata } from "next";
 import "./variables.css";
 import "./globals.css";
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
-
-
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "Студія Crystal Pole Dance",
   description: "Crystal pole dance - місце сили, відновлення та краси ",
   icons: {
-			icon: "/icon_white.svg",
-		},
+    icon: "/icon_white.svg",
+  },
 };
 
 export default function RootLayout({
@@ -21,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="uk">
-      <body>
+      <body className="min-h-screen flex flex-col bg-background">
         <Header />
         <main>{children}</main>
         <Footer />
