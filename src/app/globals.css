@@ -3,11 +3,14 @@
 :root {
   --black: #121112;
   --white: #fff8fd;
-  --fuchsia: #fb05c2;
+  --fuchsia: #f35084;
   --grey: #5d5d5d;
-  --pink: #ff60d7;
+  --pink: #f55e8f;
+  --dark-pink: #f35185;
   --beige: #fff3e6;
   --light-pink: #ffebfa;
+  --burgundy: #602336;
+  --dark-burgundy: #381320;
 }
 
 :root {
@@ -16,6 +19,15 @@
   --third-family: "Roboto", sans-serif;
 }
 
+@theme inline {
+  --font-primary: var(--font-family);
+  --font-secondary: var(--second-family);
+  --color-title: var(--burgundy);
+  --color-subtitle: var(--dark-burgundy);
+  --color-button: var(--pink);
+  --color-btn-dark: var(--fuchsia);
+  --color-numeric: var(--dark-pink);
+}
 /* Reset styles */
 
 html {
@@ -33,11 +45,11 @@ html {
   scroll-padding-top: 50px;
 }
 
-body {
+/* body {
   background: var(--with-taste-bg);
   color: var(--with-taste-black);
   margin: 0;
-}
+} */
 
 html,
 body {
@@ -55,14 +67,14 @@ p {
   margin: 0;
 }
 
-p {
+/* p {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 20px;
   letter-spacing: 0.01em;
   color: #000;
   text-align: left;
-}
+} */
 
 p:last-child {
   margin-bottom: 0;
@@ -81,23 +93,6 @@ a {
 
 address {
   font-style: normal;
-}
-
-button {
-  cursor: pointer;
-  border-radius: 32px;
-  padding: 24px 16px;
-  width: 304px;
-  height: 72px;
-  background: var(--with-taste-primary);
-  color: var(--white);
-  font-family: var(--font-family);
-  font-weight: 600;
-  font-size: 20px;
-}
-
-button:hover {
-  background: var(--with-taste-active-primary);
 }
 
 input {
@@ -153,13 +148,13 @@ img {
   touch-action: none;
 }
 
-.title {
+/* .title {
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 24px;
   letter-spacing: 0.01em;
   color: var(--with-taste-dark-brown);
-}
+} */
 
 @media screen and (max-width: 768px) {
   .title {
