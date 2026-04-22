@@ -6,6 +6,7 @@
   --fuchsia: #f35084;
   --grey: #5d5d5d;
   --pink: #f55e8f;
+  --dark-pink: #f35185;
   --beige: #fff3e6;
   --light-pink: #ffebfa;
   --burgundy: #602336;
@@ -25,6 +26,7 @@
   --color-subtitle: var(--dark-burgundy);
   --color-button: var(--pink);
   --color-btn-dark: var(--fuchsia);
+  --color-numeric: var(--dark-pink);
 }
 /* Reset styles */
 

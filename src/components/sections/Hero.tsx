@@ -6,7 +6,7 @@ import Button from "../ui/Button";
 
 const Hero = () => {
   return (
-    <div className="h-[800px]">
+    <div className="h-[463px] lg:h-[800px]">
       <div id="hero" className="w-full overflow-hidden">
         <div className="absolute  w-full h-[463px] lg:h-[800px]">
           <Image
