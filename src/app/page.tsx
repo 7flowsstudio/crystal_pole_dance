@@ -1,3 +1,4 @@
+import About from "@/components/sections/About";
 import Hero from "@/components/sections/Hero";
 import Statistics from "@/components/sections/Statistics";
 
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <Hero />
       <Statistics />
+      <About />
     </>
   );
 }
