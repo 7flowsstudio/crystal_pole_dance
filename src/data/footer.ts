@@ -2,7 +2,7 @@ export const contacts = [
 	{
 		id: 0,
 		icon: "/sprite.svg#icon-local",
-		title: "м. Бердичів, <br />вул. Європейська,12",
+		title: "м. Бердичів, \nвул. Європейська,12",
 	},
 	{
 		id: 1,
