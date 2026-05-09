@@ -8,22 +8,25 @@ const Footer = () => {
 	return (
 		<div className="bg-white pt-[40px] pb-[40px] lg:pt-[76px] lg:pb-[76px]">
 			<Container>
-				<ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[20px]">
-					<li className="flex flex-col items-start gap-4">
-						<Logo />
-						<h2 className="text-secondary font-normal text-subtitle text-[32px]/[100%]">
-							Crystal Pole Dance
-						</h2>
-						<p className="text-primary font-normal text-subtitle text-[20px]/[150%]">
+				<ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-[20px] lg:gap-[20px]">
+					<li className="flex flex-col items-center sm:items-start gap-2 md:gap-4">
+						<div className="flex md:flex-col items-center md:items-start gap-4">
+							<Logo />
+							<h2 className="text-secondary font-normal text-subtitle text-[24px]/[100%] sm:text-[32px]">
+								Crystal Pole Dance
+							</h2>
+						</div>
+
+						<p className="text-primary font-normal text-subtitle text-center sm:text-left text-[20px]/[150%]">
 							Місце сили, відновлення та краси з 2012 року. Розвивай свою жіночу
 							суперсилу разом з нами!
 						</p>
 					</li>
-					<li className="flex flex-col items-start gap-8 pt-[24px] pl-[32px]">
+					<li className="flex flex-col items-center sm:items-start gap-4 lg:gap-8 pt-[24px] xl:pl-[32px]">
 						<h3 className="text-primary font-normal text-subtitle text-[24px]/[100%]">
 							Контакти
 						</h3>
-						<ul className="flex flex-col items-start gap-[16px]">
+						<ul className="flex flex-col items-center sm:items-start gap-[16px]">
 							{contacts.map((item) => (
 								<li key={item.id} className="flex items-center gap-[16px]">
 									<div className="flex items-center justify-center size-6 shrink-0">
@@ -40,13 +43,13 @@ const Footer = () => {
 							))}
 						</ul>
 					</li>
-					<li className="flex flex-col items-start gap-8 pt-[24px] pl-[32px]">
+					<li className="flex flex-col items-center sm:items-start gap-4 lg:gap-8 pt-[24px] lg:pl-[32px]">
 						<h3 className="text-primary font-normal text-subtitle text-[24px]/[100%]">
 							Меню
 						</h3>
-						<ul className="flex items-start flex-wrap gap-[30px]">
+						<ul className="flex items-start flex-wrap gap-[24px] xl:gap-y-[16px] xl:gap-x-[32px]">
 							{menus.map((item) => (
-								<li key={item.id} className="flex items-center gap-[16px]">
+								<li key={item.id} className="flex items-center">
 									<Link
 										href={item.link}
 										className="text-primary font-normal text-subtitle text-[20px]/[100%]"
@@ -57,11 +60,11 @@ const Footer = () => {
 							))}
 						</ul>
 					</li>
-					<li className="flex flex-col items-start gap-8 pt-[24px]">
+					<li className="flex flex-col items-center sm:items-start gap-4 lg:gap-8 pt-[24px]">
 						<h3 className="text-primary font-normal text-subtitle text-[24px]/[100%]">
 							Ми в соціальних мережах
 						</h3>
-						<p className="text-primary font-normal text-subtitle text-[16px]/[150%]">
+						<p className="text-primary font-normal text-subtitle text-center sm:text-left text-[20px]/[150%]">
 							Слідкуйте за нашими новинами та успіхами наших учениць!
 						</p>
 						<ul className="flex items-start gap-[24px]">
@@ -82,6 +85,9 @@ const Footer = () => {
 						</ul>
 					</li>
 				</ul>
+				<div className="pt-[24px] text-primary font-normal text-subtitle text-center text-[20px]/[150%]">
+					© 2025 Crystal Pole Dance. Всі права захищені.
+				</div>
 			</Container>
 		</div>
 	);
