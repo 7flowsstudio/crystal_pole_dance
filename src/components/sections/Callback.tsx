@@ -51,7 +51,7 @@ const Callback = () => {
 						Залишіть свої контактні данні та ми зв’яжемося з вами найближчим
 						часом
 					</p>
-					<div className="flex flex-col md:flex-row items-stretch max-w-[560px] mx-auto md:w-full gap-[16px] lg:gap-[32px]">
+					<div className="flex flex-col md:flex-row items-stretch max-w-[560px] md:max-w-full mx-auto gap-[16px] lg:gap-[32px]">
 						<form
 							action=""
 							className="flex flex-col gap-[20px] basis-1/2 bg-[#fff4f4] shadow-[0_0_10px_0_#eeb9ca,0_0_4px_0_#f35185] rounded-2xl overflow-hidden px-[8px] py-[8px] md:py-[24px] lg:px-[32px] lg:py-[48px]"
