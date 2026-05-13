@@ -20,27 +20,27 @@ export const menus = [
 	{
 		id: 0,
 		title: "Про нас",
-		link: "/about",
+		link: "#about",
 	},
 	{
 		id: 1,
 		title: "Відгуки",
-		link: "/reviews",
+		link: "#reviews",
 	},
 	{
 		id: 2,
 		title: "Чому ми",
-		link: "/whyus",
+		link: "#whyus",
 	},
 	{
 		id: 3,
 		title: "Контакти",
-		link: "/contacts",
+		link: "#footer",
 	},
 	{
 		id: 4,
 		title: "Ціни",
-		link: "/price",
+		link: "#price",
 	},
 ];
 

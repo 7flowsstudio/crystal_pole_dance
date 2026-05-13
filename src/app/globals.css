@@ -14,6 +14,7 @@
 	--light-burgundy: #af8c95;
 	--dark-burgundy: #381320;
 	--gold: #ffcd4d;
+	--error: #cb0205;
 }
 
 :root {
@@ -34,6 +35,7 @@
 	--color-numeric-hover: var(--hover-pink);
 	--color-background: var(--white);
 	--color-goldstar: var(--gold);
+	--color-error: var(--error);
 }
 /* Reset styles */
 

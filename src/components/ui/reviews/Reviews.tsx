@@ -4,7 +4,7 @@ import SliderReviews from "./SliderReviews";
 
 const Reviews = () => {
 	return (
-		<div className="flex flex-col gap-[40px]">
+		<div id="reviews" className="flex flex-col gap-[40px]">
 			<SectionHeading className="pb-[8px] md:pb-[32px] text-center">
 				Відгуки
 			</SectionHeading>

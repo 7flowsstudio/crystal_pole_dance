@@ -3,7 +3,7 @@ import Callback from "@/components/sections/Callback";
 import Hero from "@/components/sections/Hero";
 import SertificationAndReviews from "@/components/sections/SertificationAndReviews";
 import Statistics from "@/components/sections/Statistics";
-import Whous from "@/components/sections/Whous";
+import Whyus from "@/components/sections/Whyus";
 
 export default function Home() {
 	return (
@@ -11,7 +11,7 @@ export default function Home() {
 			<Hero />
 			<Statistics />
 			<About />
-			<Whous />
+			<Whyus />
 			<SertificationAndReviews />
 			<Callback />
 		</>

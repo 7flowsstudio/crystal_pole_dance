@@ -7,16 +7,15 @@ import { FormInput } from "../ui/form/FormInput";
 import { UserFormState } from "@/data/lib/types/forms";
 import { sendUserForm } from "@/data/lib/actions/send-form-actions";
 import { FormTextarea } from "../ui/form/FormTextarea";
-import Link from "next/link";
 import Button from "../ui/Button";
+import DesktopPopUp from "../ui/modal/DesktopPopUp";
+import Modal from "../ui/modal/Modal";
+import { usePathname, useRouter } from "next/navigation";
 
 const initialState: UserFormState = {
 	success: false,
 	errors: {},
 };
-interface CourseFormProps {
-	onSuccess: () => void;
-}
 
 const Callback = () => {
 	const [state, formAction, pending] = useActionState<UserFormState, FormData>(
@@ -26,10 +25,8 @@ const Callback = () => {
 	const formRef = useRef<HTMLFormElement>(null);
 	const [isAgreed, setIsAgreed] = useState(false);
 	const [isOpen, setIsOpen] = useState(false);
-
-	const onSuccess = () => {
-		setIsOpen(true);
-	};
+	const router = useRouter();
+	const pathname = usePathname();
 
 	useEffect(() => {
 		if (state.success && formRef.current) {
@@ -40,8 +37,20 @@ const Callback = () => {
 		}
 	}, [state.success]);
 
+	const handleHomeClick = () => {
+		if (pathname === "/") {
+			setIsOpen(false);
+		} else {
+			router.push("/");
+			setIsOpen(false);
+		}
+	};
+
 	return (
-		<div className="bg-[linear-gradient(180deg,#fef0f1_0%,#fefefe_100%)] pt-[40px] pb-[40px] lg:pt-[100px] lg:pb-[100px]">
+		<div
+			id="callback"
+			className="bg-[linear-gradient(180deg,#fef0f1_0%,#fefefe_100%)] pt-[40px] pb-[40px] lg:pt-[100px] lg:pb-[100px]"
+		>
 			<Container>
 				<div className="lg:max-w-[1042px] mx-auto">
 					<SectionHeading className="pb-[8px] md:pb-[32px] text-center">
@@ -53,7 +62,8 @@ const Callback = () => {
 					</p>
 					<div className="flex flex-col md:flex-row items-stretch max-w-[560px] md:max-w-full mx-auto gap-[16px] lg:gap-[32px]">
 						<form
-							action=""
+							action={formAction}
+							ref={formRef}
 							className="flex flex-col gap-[20px] basis-1/2 bg-[#fff4f4] shadow-[0_0_10px_0_#eeb9ca,0_0_4px_0_#f35185] rounded-2xl overflow-hidden px-[8px] py-[8px] md:py-[24px] lg:px-[32px] lg:py-[48px]"
 						>
 							<FormInput
@@ -102,9 +112,9 @@ const Callback = () => {
 								)}
 							</div>
 							<Button
+								type="submit"
 								disabled={pending || !isAgreed}
-								className={`w-full max-w-full ${!isAgreed ? "opacity-60 cursor-not-allowed" : ""}
-  `}
+								className={`w-full max-w-full ${!isAgreed ? "opacity-60 cursor-not-allowed" : ""}`}
 							>
 								{pending ? "Відправка..." : "Записатися на заняття"}
 							</Button>
@@ -141,6 +151,14 @@ const Callback = () => {
 							></Image>
 						</div>
 					</div>
+
+					<Modal
+						isOpen={isOpen}
+						onClose={() => setIsOpen(false)}
+						desktopStyles="rounded-[24px] bg-[#F7F5F3] shadow-[0_0_14.3px_24px_rgba(0,0,0,0.19)]"
+					>
+						<DesktopPopUp onHomeClick={handleHomeClick} />
+					</Modal>
 				</div>
 			</Container>
 		</div>

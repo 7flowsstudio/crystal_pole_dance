@@ -6,7 +6,7 @@ import Button from "../ui/Button";
 
 const Hero = () => {
 	return (
-		<div className="h-[463px] lg:h-[800px]">
+		<div id="hero" className="h-[463px] lg:h-[800px]">
 			<div id="hero" className="w-full overflow-hidden">
 				<div className="absolute  w-full h-[463px] lg:h-[800px]">
 					<Image
@@ -29,8 +29,24 @@ const Hero = () => {
 								Місце де народжується стиль впевненість та внутрішня собода
 							</p>
 							<div className="max-w-[162px] lg:max-w-[282px]">
-								<Button className="lg:hidden">Записатися</Button>
-								<Button className="hidden lg:flex mt-[275px]">
+								<Button
+									onClick={() => {
+										document
+											.getElementById("callback")
+											?.scrollIntoView({ behavior: "smooth" });
+									}}
+									className="lg:hidden"
+								>
+									Записатися
+								</Button>
+								<Button
+									onClick={() => {
+										document
+											.getElementById("callback")
+											?.scrollIntoView({ behavior: "smooth" });
+									}}
+									className="hidden lg:flex mt-[275px]"
+								>
 									Записатися на заняття
 								</Button>
 							</div>

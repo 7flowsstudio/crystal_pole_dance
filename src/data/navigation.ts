@@ -3,5 +3,5 @@ export const navigation = [
 	{ href: "#whyus", label: "Чому ми" },
 	{ href: "#price", label: "Ціни" },
 	{ href: "#reviews", label: "Відгуки" },
-	{ href: "#contacts", label: "Контакти" },
+	{ href: "#footer", label: "Контакти" },
 ] as const;

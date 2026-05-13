@@ -17,7 +17,7 @@ export const FormInput: React.FC<FormInputProps> = ({
 	error,
 }) => {
 	return (
-		<div className="flex flex-col justify-end h-[64px] relative">
+		<div className="flex flex-col justify-end relative">
 			<label
 				htmlFor={name}
 				className="text-primary text-subtitle text-[14px]/[100%] md:text-[20px] top-[-2] absolute left-[6px] bg-[#fff4f4] px-[8px] py-[8px]"
@@ -28,7 +28,7 @@ export const FormInput: React.FC<FormInputProps> = ({
 				name={name}
 				type={type}
 				className={clsx(
-					"py-4 px-4 rounded-2xl border-[1px] h-[48px] border-[#f69fbd] transition-colors",
+					"py-4 px-4 mt-4 rounded-2xl border-[1px] h-[48px] border-[#f69fbd] transition-colors",
 					"focus:border-secondary",
 					"not-placeholder-shown:border-primary",
 					error && "border-error",

@@ -4,9 +4,12 @@ import SectionHeading from "../ui/SectionHeading";
 import { whous, whousprice } from "@/data/whous";
 import Image from "next/image";
 
-const Whous = () => {
+const Whyus = () => {
 	return (
-		<div className="bg-[linear-gradient(180deg,#fef0f1_0%,#fefefe_100%)] pt-[40px] pb-[40px] lg:pt-[100px] lg:pb-[100px]">
+		<div
+			id="whyus"
+			className="bg-[linear-gradient(180deg,#fef0f1_0%,#fefefe_100%)] pt-[40px] pb-[40px] lg:pt-[100px] lg:pb-[100px]"
+		>
 			<Container>
 				<SectionHeading className="pb-[32px] md:pb-[80px] text-center">
 					Чому ми
@@ -42,7 +45,7 @@ const Whous = () => {
 							className="object-contain"
 						></Image>
 					</div>
-					<div className="flex flex-col gap-8 w-full">
+					<div id="price" className="flex flex-col gap-8 w-full">
 						<h3 className="font-secondary font-bold text-[24px]/[100%] lg:text-[40px] text-subtitle text-left">
 							Наші ціни
 						</h3>
@@ -69,4 +72,4 @@ const Whous = () => {
 	);
 };
 
-export default Whous;
+export default Whyus;
