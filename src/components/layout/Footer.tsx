@@ -6,7 +6,10 @@ import Link from "next/link";
 
 const Footer = () => {
 	return (
-		<div className="bg-white pt-[40px] pb-[40px] lg:pt-[76px] lg:pb-[76px]">
+		<div
+			id="footer"
+			className="bg-white pt-[40px] pb-[40px] lg:pt-[76px] lg:pb-[76px]"
+		>
 			<Container>
 				<ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-[20px] lg:gap-[20px]">
 					<li className="flex flex-col items-center sm:items-start gap-2 md:gap-4">
@@ -28,7 +31,10 @@ const Footer = () => {
 						</h3>
 						<ul className="flex flex-col items-center sm:items-start gap-[16px]">
 							{contacts.map((item) => (
-								<li key={item.id} className="flex items-center gap-[16px]">
+								<li
+									key={item.id}
+									className="flex items-center gap-[16px] mx-auto sm:mx-0"
+								>
 									<div className="flex items-center justify-center size-6 shrink-0">
 										<svg
 											className={`w-[100%] h-[100%] shrink-0 ${item.id !== 1 ? "stroke-subtitle fill-none" : "fill-subtitle"}`}
@@ -36,7 +42,7 @@ const Footer = () => {
 											<use href={item.icon}></use>
 										</svg>
 									</div>
-									<p className="text-primary font-normal text-subtitle text-[20px]/[100%]">
+									<p className="whitespace-pre-line sm:whitespace-normal text-primary font-normal text-subtitle text-[20px]/[100%]">
 										{item.title}
 									</p>
 								</li>
@@ -52,9 +58,10 @@ const Footer = () => {
 								<li key={item.id} className="flex items-center">
 									<Link
 										href={item.link}
-										className="text-primary font-normal text-subtitle text-[20px]/[100%]"
+										className="group relative text-primary font-normal text-subtitle text-[20px]/[100%]"
 									>
 										{item.title}
+										<span className="absolute left-0 -bottom-[4px] h-[2px] w-0 bg-[linear-gradient(90deg,var(--pink)_0%,var(--fuchsia)_100%)] transition-all duration-300 group-hover:w-full rounded-full" />
 									</Link>
 								</li>
 							))}
@@ -72,9 +79,9 @@ const Footer = () => {
 								<li key={item.id} className="flex items-center justify-center">
 									<Link
 										href={item.link}
-										className="text-primary font-normal text-subtitle text-[20px]/[100%]"
+										className="group relative text-primary font-normal text-subtitle text-[20px]/[100%]"
 									>
-										<div className="flex items-center justify-center size-10 shrink-0">
+										<div className="flex items-center justify-center size-10 shrink-0 rounded-full transition-all duration-300 hover:-translate-y-[4px] active:scale-90">
 											<svg className="w-[100%] h-[100%]">
 												<use href={item.icon}></use>
 											</svg>

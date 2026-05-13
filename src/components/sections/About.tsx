@@ -7,7 +7,10 @@ import Image from "next/image";
 const About = () => {
 	return (
 		<Container>
-			<div className="pt-[40px] pb-[40px] md:pt-[100px] md:pb-[100px]">
+			<div
+				id="about"
+				className="pt-[40px] pb-[40px] md:pt-[100px] md:pb-[100px]"
+			>
 				<div className="flex flex-col md:flex-row gap-[24px]">
 					<div className="md:w-1/2">
 						<SectionHeading className="pb-[24px] md:pb-[32px]">

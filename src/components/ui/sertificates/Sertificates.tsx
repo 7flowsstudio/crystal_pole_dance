@@ -4,7 +4,7 @@ import SliderSertifications from "./SliderSertifications";
 
 const Sertificates = () => {
 	return (
-		<div className="flex flex-col gap-[40px]">
+		<div id="sertifications" className="flex flex-col gap-[40px]">
 			<SectionHeading className="pb-[8px] md:pb-[32px] text-center">
 				Сертифікати та нагороди
 			</SectionHeading>

@@ -5,7 +5,10 @@ import Reviews from "../ui/reviews/Reviews";
 
 const SertificationAndReviews = () => {
 	return (
-		<div className="bg-[linear-gradient(180deg,#fefefe_0%,#fef0f1_100%)] pt-[40px] pb-[40px] lg:pt-[100px] lg:pb-[100px]">
+		<div
+			id="sertifications_and_reviews"
+			className="bg-[linear-gradient(180deg,#fefefe_0%,#fef0f1_100%)] pt-[40px] pb-[40px] lg:pt-[100px] lg:pb-[100px]"
+		>
 			<Container>
 				<div className="flex flex-col gap-[100px]">
 					<Sertificates />
