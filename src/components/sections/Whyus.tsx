@@ -42,7 +42,7 @@ const Whyus = () => {
 							src="/img/whyus/Image_girl.png"
 							alt="dancing"
 							fill
-							className="object-contain"
+							className="object-contain md:scale-[1.5] lg:scale-[1.8]"
 						></Image>
 					</div>
 					<div id="price" className="flex flex-col gap-8 w-full">
