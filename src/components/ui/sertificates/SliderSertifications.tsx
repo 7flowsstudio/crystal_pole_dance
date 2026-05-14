@@ -87,7 +87,7 @@ const SliderSertifications = () => {
 								"rounded-full bg-numeric md:hover:bg-numeric-hover backdrop-blur-[25px] shadow-[inset_0_1px_40px_0_rgba(227,222,255,0.3)] hover:shadow-[inset_0_1px_40px_0_rgba(227,222,255,0.3)] active:translate-y-[2px] active:shadow-[inset_0_2px_20px_0_rgba(0,0,0,0.2)]",
 							)}
 						>
-							<svg className="fill-subtitle group-hover:fill-subtitle-hover w-[24px] h-[24px] md:w-[40px] md:h-[40px] rotate-[0deg]">
+							<svg className="fill-subtitle md:group-hover:fill-subtitle-hover transition-colors duration-300 w-[24px] h-[24px] md:w-[40px] md:h-[40px] rotate-[0deg]">
 								<use href="/sprite.svg#icon-arrow-left"></use>
 							</svg>
 						</button>
@@ -99,7 +99,7 @@ const SliderSertifications = () => {
 								"rounded-full bg-numeric md:hover:bg-numeric-hover backdrop-blur-[25px] shadow-[inset_0_1px_40px_0_rgba(227,222,255,0.3)] hover:shadow-[inset_0_1px_40px_0_rgba(227,222,255,0.3)] active:translate-y-[2px] active:shadow-[inset_0_2px_20px_0_rgba(0,0,0,0.2)]",
 							)}
 						>
-							<svg className="fill-subtitle group-hover:fill-subtitle-hover w-[24px] h-[24px] md:w-[40px] md:h-[40px] rotate-[180deg]">
+							<svg className="fill-subtitle md:group-hover:fill-subtitle-hover transition-colors duration-300 w-[24px] h-[24px] md:w-[40px] md:h-[40px] rotate-[180deg]">
 								<use href="/sprite.svg#icon-arrow-left"></use>
 							</svg>
 						</button>

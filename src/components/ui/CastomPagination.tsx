@@ -32,19 +32,28 @@ const CastomPagination = ({
 				className,
 			)}
 		>
-			{lists.map((step, index) => (
-				<div key={index} className="flex items-center justify-center gap-[8px]">
-					{index === activeSlide ? (
-						<div
-							className={`h-[6px] md:h-[8px] bg-[#f6a0be] rounded-xl ${isReviews ? "w-[6px] md:w-[8px]" : "w-[24px] md:w-[32px]"}`}
-						></div>
-					) : (
-						<div
-							className={`w-[6px] h-[6px] md:w-[8px] md:h-[8px]  rounded-xl ${isReviews ? "bg-[#F7D7E3]" : "bg-[#f6a0be]"}`}
-						></div>
-					)}
-				</div>
-			))}
+			{lists.map((step, index) => {
+				const isActive = index === activeSlide;
+
+				return (
+					<div
+						key={index}
+						className={clsx(
+							"rounded-xl transition-all duration-300 ease-out",
+							isActive
+								? [
+										"h-[6px] md:h-[8px]",
+										isReviews ? "w-[6px] md:w-[8px]" : "w-[24px] md:w-[32px]",
+										"bg-[#f6a0be]",
+									]
+								: [
+										"w-[6px] h-[6px] md:w-[8px] md:h-[8px]",
+										isReviews ? "bg-[#F7D7E3]" : "bg-[#f6a0be]",
+									],
+						)}
+					/>
+				);
+			})}
 		</div>
 	);
 };

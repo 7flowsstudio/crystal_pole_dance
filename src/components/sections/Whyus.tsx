@@ -39,7 +39,7 @@ const Whyus = () => {
 				<div className="mt-[32px] md:mt-[100px] px-[16px] py-[16px] sm:px-[32px] sm:py-[32px] lg:px-[115px] lg:py-[65px] flex flex-row items-center gap-[100px] lg:gap-[140px] bg-[linear-gradient(180deg,#feebef_0%,rgba(254,241,242,0.6)_100%)] rounded-[20px]">
 					<div className="hidden md:block relative md:w-[162px] h-[380px] lg:h-[487px]">
 						<Image
-							src="/img/whyus/Image.png"
+							src="/img/whyus/Image_girl.png"
 							alt="dancing"
 							fill
 							className="object-contain"
