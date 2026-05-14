@@ -23,31 +23,36 @@ export const whousprice = [
 	{
 		id: 0,
 		title: "Індивідуальне заняття",
-		price: "350",
+		price: "400",
 	},
 	{
 		id: 1,
 		title: "Дві людини",
-		price: "650",
+		price: "700",
 	},
 	{
 		id: 2,
 		title: "Три людини",
-		price: "900",
+		price: "1050",
 	},
 	{
 		id: 3,
 		title: "Групові заняття",
-		price: "150",
+		price: "200",
 	},
 	{
 		id: 4,
-		title: "Шість занять",
-		price: "870",
+		title: "Шість тренувань",
+		price: "1100",
 	},
 	{
 		id: 5,
-		title: "Десять занять",
-		price: "1400",
+		title: "Вісім тренувань",
+		price: "1450",
+	},
+	{
+		id: 6,
+		title: "Десять тренувань",
+		price: "1800",
 	},
 ];
