@@ -1,10 +1,9 @@
 import React from "react";
-import s from "./CastomPagination.module.css";
 import clsx from "clsx";
 
 type PaginationProps = {
-	lists: ItemProps[] | undefined;
-	activeSlide: number | null;
+	lists: readonly ItemProps[] | undefined;
+	activeSlide?: number;
 	className?: string;
 	type?: string;
 };
@@ -20,11 +19,23 @@ type ItemProps = {
 
 const CastomPagination = ({
 	lists = [],
-	activeSlide,
+	activeSlide = 0,
 	className,
 	type,
 }: PaginationProps) => {
 	const isReviews = type === "reviews";
+
+	// групування по 3
+	const groupedSlides =
+		lists.length > 3
+			? Array.from({
+					length: Math.ceil(lists.length / 3),
+				})
+			: lists;
+
+	const activeGroup =
+		lists.length > 3 ? Math.floor(activeSlide / 3) : activeSlide;
+
 	return (
 		<div
 			className={clsx(
@@ -32,14 +43,14 @@ const CastomPagination = ({
 				className,
 			)}
 		>
-			{lists.map((step, index) => {
-				const isActive = index === activeSlide;
+			{groupedSlides.map((_, index) => {
+				const isActive = index === activeGroup;
 
 				return (
 					<div
 						key={index}
 						className={clsx(
-							"rounded-xl transition-all duration-300 ease-out",
+							"rounded-xl transition-all duration-500 ease-out",
 							isActive
 								? [
 										"h-[6px] md:h-[8px]",
