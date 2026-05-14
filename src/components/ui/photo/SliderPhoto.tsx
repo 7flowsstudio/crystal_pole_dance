@@ -12,9 +12,9 @@ import Image from "next/image";
 import CastomPagination from "../CastomPagination";
 import Modal from "../modal/Modal";
 import ImagePopUp from "../modal/ImagePopUp";
-import { cardListsSertificates } from "@/data/sertificateslider";
+import { cardListsPhoto } from "@/data/photoslider";
 
-const SliderSertifications = () => {
+const SliderPhoto = () => {
 	const [activeSlide, setActiveSlide] = useState<number>(0);
 	const [image, setImage] = useState<string | null>(null);
 	const [isOpen, setIsOpen] = useState(false);
@@ -26,8 +26,8 @@ const SliderSertifications = () => {
 					<Swiper
 						className="min-w-0 md:max-w-[calc(100%-140px)] w-full h-auto"
 						navigation={{
-							nextEl: ".sertification-next",
-							prevEl: ".sertification-prev",
+							nextEl: ".photo-next",
+							prevEl: ".photo-prev",
 						}}
 						modules={[Pagination, Navigation]}
 						loop={true}
@@ -41,7 +41,7 @@ const SliderSertifications = () => {
 							1028: { slidesPerView: 3, spaceBetween: 32 },
 						}}
 					>
-						{cardListsSertificates?.map((item, index) => (
+						{cardListsPhoto?.map((item, index) => (
 							<SwiperSlide key={index} className="flex justify-center">
 								<div className="relative w-full rounded-2xl overflow-hidden shadow-[0_0_10px_0_#eeb9ca,0_0_4px_0_#f35185] mt-1 mb-1 cursor-pointer">
 									<Image
@@ -59,11 +59,11 @@ const SliderSertifications = () => {
 							</SwiperSlide>
 						))}
 					</Swiper>
-					<div className="flex items-center justify-between w-[180px] h-[40px] md:w-full md:h-[60px] absolute bottom-[0px] md:top-[45%] md:translate-y-[-100%]">
+					<div className="flex items-center justify-between w-[240px] h-[40px] md:w-full md:h-[60px] absolute bottom-[0px] md:top-[45%] md:translate-y-[-100%]">
 						<button
 							className={clsx(
 								"group",
-								"sertification-prev",
+								"photo-prev",
 								"flex items-center justify-center cursor-pointer z-10 min-w-[40px] h-[40px] md:min-w-[60px] md:h-[60px]",
 								"rounded-full bg-numeric md:hover:bg-numeric-hover backdrop-blur-[25px] shadow-[inset_0_1px_40px_0_rgba(227,222,255,0.3)] hover:shadow-[inset_0_1px_40px_0_rgba(227,222,255,0.3)] active:translate-y-[2px] active:shadow-[inset_0_2px_20px_0_rgba(0,0,0,0.2)]",
 							)}
@@ -75,7 +75,7 @@ const SliderSertifications = () => {
 						<button
 							className={clsx(
 								"group",
-								"sertification-next",
+								"photo-next",
 								"flex items-center justify-center cursor-pointer z-10 min-w-[40px] h-[40px] md:min-w-[60px] md:h-[60px]",
 								"rounded-full bg-numeric md:hover:bg-numeric-hover backdrop-blur-[25px] shadow-[inset_0_1px_40px_0_rgba(227,222,255,0.3)] hover:shadow-[inset_0_1px_40px_0_rgba(227,222,255,0.3)] active:translate-y-[2px] active:shadow-[inset_0_2px_20px_0_rgba(0,0,0,0.2)]",
 							)}
@@ -86,7 +86,7 @@ const SliderSertifications = () => {
 						</button>
 					</div>
 					<CastomPagination
-						lists={cardListsSertificates}
+						lists={cardListsPhoto}
 						activeSlide={activeSlide}
 						className="h-[40px]"
 					/>
@@ -104,4 +104,4 @@ const SliderSertifications = () => {
 	);
 };
 
-export default SliderSertifications;
+export default SliderPhoto;

@@ -39,7 +39,7 @@ const cardLists = [
 ];
 
 const SliderReviews = () => {
-	const [activeSlide, setActiveSlide] = useState<number | null>(null);
+	const [activeSlide, setActiveSlide] = useState<number>(0);
 	return (
 		<div id="HowItWorksSwiper" className="w-full">
 			<div className="flex w-full flex-col items-center gap-[40px] relative">
