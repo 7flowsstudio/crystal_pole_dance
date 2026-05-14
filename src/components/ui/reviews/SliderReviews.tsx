@@ -74,7 +74,7 @@ const SliderReviews = () => {
 							"rounded-full bg-numeric md:hover:bg-numeric-hover backdrop-blur-[25px] shadow-[inset_0_1px_40px_0_rgba(227,222,255,0.3)] hover:shadow-[inset_0_1px_40px_0_rgba(227,222,255,0.3)] active:translate-y-[2px] active:shadow-[inset_0_2px_20px_0_rgba(0,0,0,0.2)]",
 						)}
 					>
-						<svg className="stroke-subtitle group-hover:stroke-subtitle-hover fill-none w-[24px] h-[24px] md:w-[24px] md:h-[20px] rotate-[180deg]">
+						<svg className="stroke-subtitle md:group-hover:stroke-subtitle-hover fill-none transition-colors duration-300 w-[16px] h-[12px] md:w-[24px] md:h-[20px] rotate-[180deg]">
 							<use href="/sprite.svg#icon-arrow-right-long"></use>
 						</svg>
 					</button>
@@ -86,7 +86,7 @@ const SliderReviews = () => {
 							"rounded-full bg-numeric md:hover:bg-numeric-hover backdrop-blur-[25px] shadow-[inset_0_1px_40px_0_rgba(227,222,255,0.3)] hover:shadow-[inset_0_1px_40px_0_rgba(227,222,255,0.3)] active:translate-y-[2px] active:shadow-[inset_0_2px_20px_0_rgba(0,0,0,0.2)]",
 						)}
 					>
-						<svg className="stroke-subtitle group-hover:stroke-subtitle-hover fill-none w-[24px] h-[24px] md:w-[24px] md:h-[20px] rotate-[0deg]">
+						<svg className="stroke-subtitle md:group-hover:stroke-subtitle-hover fill-none transition-colors duration-300 w-[16px] h-[12px] md:w-[24px] md:h-[20px] rotate-[0deg]">
 							<use href="/sprite.svg#icon-arrow-right-long"></use>
 						</svg>
 					</button>

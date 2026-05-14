@@ -1,4 +1,5 @@
 import Link from "next/link";
+import HandleScroll from "../ui/HandleScroll";
 interface MobileMenuProps {
 	isOpen: boolean;
 	onClose: () => void;
@@ -51,36 +52,40 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
 
 				<nav className="flex-1 flex flex-col justify-between px-8 pb-8 gap-8">
 					<div className="flex flex-col min-h-[60%] justify-between items-center text-subtitle">
-						<Link
-							href="#about"
+						<button
+							onClick={() => HandleScroll({ id: "about", onClose })}
 							className="text-xl font-medium tracking-tight leading-normal"
 						>
 							Про нас
-						</Link>
-						<Link
-							href="#whyus"
+						</button>
+
+						<button
+							onClick={() => HandleScroll({ id: "whyus", onClose })}
 							className="text-xl font-medium tracking-tight leading-normal"
 						>
 							Чому ми
-						</Link>
-						<Link
-							href="#price"
+						</button>
+
+						<button
+							onClick={() => HandleScroll({ id: "price", onClose })}
 							className="text-xl font-medium tracking-tight leading-normal"
 						>
 							Ціни
-						</Link>
-						<Link
-							href="#reviews"
-							className="text-xl font-manrope font-medium tracking-tight leading-normal"
+						</button>
+
+						<button
+							onClick={() => HandleScroll({ id: "reviews", onClose })}
+							className="text-xl font-medium tracking-tight leading-normal"
 						>
 							Відгуки
-						</Link>
-						<Link
-							href="#contacts"
+						</button>
+
+						<button
+							onClick={() => HandleScroll({ id: "footer", onClose })}
 							className="text-xl font-medium tracking-tight leading-normal"
 						>
 							Контакти
-						</Link>
+						</button>
 					</div>
 					<div className="flex items-center justify-center gap-8">
 						<a
@@ -126,6 +131,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
 					</div>
 					<button
 						type="button"
+						onClick={() => HandleScroll({ id: "callback", onClose })}
 						className="block self-center font-manrope font-normal text-[20px] leading-[100%] tracking-[0] bg-[linear-gradient(45deg,var(--pink)_0%,var(--fuchsia)_100%)] rounded-[10] w-[162] h-[40] cursor-pointer transition duration-300 text-white hover:opacity-80"
 					>
 						Консультація

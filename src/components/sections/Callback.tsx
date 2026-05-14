@@ -144,7 +144,7 @@ const Callback = () => {
 						</form>
 						<div className="relative basis-1/2 min-h-[500px] shadow-[0_0_10px_0_#eeb9ca,0_0_4px_0_#f35185] rounded-2xl overflow-hidden">
 							<Image
-								src="/img/callback/image_girl.webp"
+								src="/img/callback/image_girl_gest.webp"
 								alt="dancing"
 								fill
 								className="object-cover"
